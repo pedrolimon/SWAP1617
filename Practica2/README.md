@@ -7,4 +7,4 @@ Partimos desde la idea de que la m√°quina 1 tiene una carpeta llamada m1 y la m√
 
 ![img](https://github.com/pedrolimon/SWAP1617/blob/master/Practica2/archivos.png)
 
-Tras esto, instalamos la herramienta **Rsync**: 'apt-get install rsync'
+Tras esto, instalamos la herramienta **Rsync**: `apt-get install rsync`
