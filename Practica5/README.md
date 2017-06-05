@@ -24,7 +24,7 @@
 
 ![img](https://github.com/pedrolimon/SWAP1617/blob/master/Practica5/copiadoBD.png)
 
-4. Realizar la configuración maestro-esclavo de los servidores MySQL para que la replicación de datos se realice automáticamente.
+## 4. Realizar la configuración maestro-esclavo de los servidores MySQL para que la replicación de datos se realice automáticamente.
 
 - Primero tenemos que hacer la configuración inicial de mySQL en el maestro que consiste en comentar la línea:
     - `#bind-address 127.0.0.1`
