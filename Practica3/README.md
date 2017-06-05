@@ -9,6 +9,7 @@
 ![img](https://github.com/pedrolimon/SWAP1617/blob/master/Practica3/confNginxRoundRobin.png)
 - Tras la configuración tenemos que deshabilitar la opción de que funcione como servidor web, para ello hay que comentar la línea `#include /etc/nginx/sites-enabled/*;` dentro del archivo: `/etc/nginx/nginx.conf`. Tras la configuración tenemos que deshabilitar la opción de que funcione como servidor web, para ello hay que comentar la línea `#include /etc/nginx/sites-enabled/*;` dentro del archivo: `/etc/nginx/nginx.conf`
 - Por último reiniciamos el servicio: `service nginx restart` y desde una máquina extrna y con la herramienta **curl** probamos que funcione bien
+
 ![img](https://github.com/pedrolimon/SWAP1617/blob/master/Practica3/curlNginx.png)
 
 ## 2. Configurar una máquina e instalarle el haproxy como balanceador de carga
