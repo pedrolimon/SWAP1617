@@ -33,3 +33,19 @@
 
 - Tras obtener el identificador tenemos que editar el archivo **/etc/fstab** y añadir la línea:
     - `UUID=ccbbbbcc-dddd-eeee-ffff-aaabbbcccddd /dat ext2 defaults 0 0`
+
+## 2. Simular un fallo en uno de los discos del RAID (mediante comandos con el mdadm), retirarlo “en caliente”, comprobar que se puede acceder a la información que hay almacenada en el RAID, y por último, añadirlo al conjunto y comprobar que se reconstruye correctamente.
+
+- Primero simularemos un fallo en uno de los discos con `mdadm --manage --set-faulty /dev/md0 /dev/sdb` y vemos su comportamiento
+
+![img](https://github.com/pedrolimon/SWAP1617/blob/master/Practica6/mdadmFaulty.png)
+
+- También retiramos "en caliente" un disco, concretamente el que está marcado como que ha fallado con `mdadm --manage --remove /dev/md0 /dev/sdb` y vemos su comportamiento
+
+![img](https://github.com/pedrolimon/SWAP1617/blob/master/Practica6/mdadmRemove.png)
+
+- Por último añadimos el disco que hemos quitado antes con `https://github.com/pedrolimon/SWAP1617/blob/master/Practica6/mdadmAdd.png` y comprovamos su funcionamiento
+
+![img](https://github.com/pedrolimon/SWAP1617/blob/master/Practica6/mdadmAdd.png)
+
+- Para comprobar que todo funciona correctamente reiniciamos la máquina y ejecutamos el comando `mdadm --detail /dev/md127`. Ahora lo hacemos con `/dev/md127` porque hemos reiniciado el sistema y se renombra con este nombre
